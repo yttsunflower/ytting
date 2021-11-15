@@ -1,20 +1,59 @@
-// JavaScript Document
-//乐购商城首页
-//2021/10/26 by 罗艳
-//当前页面加载完成、
-$(function(){
-				$('#bannerInner').tyslide({
-				boxh:465,//盒子的高度
-				w:1000,//盒子的宽度
-				h:400,//图片的高度
-				isShow:true,//是否显示控制器
-				isShowBtn:true,//是否显示左右按钮
-				controltop:40,//控制按钮上下偏移的位置,要将按钮向下移动   首先保证boxh 高度>图片 h
-				controlsW:20,//控制按钮宽度
-				controlsH:20,//控制按钮高度
-				radius:15,//控制按钮圆角度数
-				controlsColor:"#d7d7d7",//普通控制按钮的颜色
-				controlsCurrentColor:"#ff6600",//当前控制按钮的颜色
-				isShowNum:true //是否显示数字
-			});
+$(function() {
+    //首页轮播插件
+    $('#img').tyslide({
+        boxh: 435, //轮播的高度
+        w: 1000, //图片宽度
+        h: 410, //图片高度
+        isShow: true, //是否显示控制按钮
+        isShowBtn: true, //是否显示左右按钮
+        controltop: 1, //控制器按钮上下偏移距离 
+        controlsW: 20, //控制按钮宽度
+        controlsH: 20, //控制按钮高度
+        radius: 10, //圆角度数
+        controlsColor: "#ff6600", //普通控制按钮的颜色
+        controlsCurrentColor: "#00ff00", //当前控制按钮的颜色
+        isShowNum: true //是否显示数字
+    })
+
+    $('#ebook').tyslide({
+        boxh: 223, //轮播的高度
+        w: 332, //图片宽度
+        h: 223, //图片高度
+        isShow: true, //是否显示控制按钮
+        isShowBtn: true, //是否显示左右按钮
+        controltop: 1, //控制器按钮上下偏移距离 
+        controlsW: 20, //控制按钮宽度
+        controlsH: 20, //控制按钮高度
+        radius: 10, //圆角度数
+        controlsColor: "#ff6600", //普通控制按钮的颜色
+        controlsCurrentColor: "#00ff00", //当前控制按钮的颜色
+        isShowNum: true //是否显示数字
+    })
+
+    $('#clothes').tyslide({
+        boxh: 340, //轮播的高度
+        w: 420, //图片宽度
+        h: 340, //图片高度
+        isShow: true, //是否显示控制按钮
+        isShowBtn: true, //是否显示左右按钮
+        controltop: 1, //控制器按钮上下偏移距离 
+        controlsW: 20, //控制按钮宽度
+        controlsH: 20, //控制按钮高度
+        radius: 10, //圆角度数
+        controlsColor: "#ff6600", //普通控制按钮的颜色
+        controlsCurrentColor: "#00ff00", //当前控制按钮的颜色
+        isShowNum: true //是否显示数字
+    })
+
+
+    //电子书手风琴效果
+    $('#ebooks-right > li').mouseenter(function() {
+        //对鼠标所在的位置操作
+        $(this).find('.desc').show(); //内容显示
+        $(this).find('#ebook-title').hide(); //标题隐藏
+        //对其他位置的操作
+        $(this).siblings().find('.desc').hide(); //内容隐藏
+        $(this).siblings().find('#ebook-title').show(); //标题显示
+
+    })
 })
